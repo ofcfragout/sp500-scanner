@@ -1,7 +1,7 @@
 import { StocksMetricsTable } from "@/components/dashboard/stocks-metrics-table";
 import { ThemeSwitcher } from "@/components/theme/theme-switcher";
 import Link from "next/link";
-import { ArrowLeft, Table2 } from "lucide-react";
+import { ArrowLeft, Crosshair, Table2 } from "lucide-react";
 
 export default function TablePage() {
   return (
@@ -27,6 +27,13 @@ export default function TablePage() {
             </Link>
           </div>
           <div className="flex shrink-0 flex-wrap items-center gap-2 lg:justify-end">
+            <Link
+              href="/targets"
+              className="inline-flex items-center gap-2 rounded-xl border border-white/[0.08] bg-zinc-900/60 px-3 py-2 text-xs font-medium text-zinc-300 transition-colors hover:border-emerald-500/20 hover:text-white"
+            >
+              <Crosshair className="size-3.5" aria-hidden />
+              Profit targets
+            </Link>
             <ThemeSwitcher />
           </div>
         </header>
