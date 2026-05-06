@@ -71,8 +71,8 @@ async function mapPool<T, R>(
 
 export async function runScan(opts: ScanOptions = {}): Promise<ScanResult> {
   const maxTickers = opts.maxTickers ?? Infinity;
-  const minComposite = opts.minComposite ?? 54;
-  const topN = opts.topN ?? 100;
+  const minComposite = opts.minComposite ?? 4;
+  const topN = opts.topN ?? 600;
   const concurrency = opts.concurrency ?? 10;
 
   const started = Date.now();

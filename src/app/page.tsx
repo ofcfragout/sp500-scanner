@@ -1,5 +1,7 @@
 import { Dashboard } from "@/components/dashboard/dashboard";
 import { ThemeSwitcher } from "@/components/theme/theme-switcher";
+import Link from "next/link";
+import { Table2 } from "lucide-react";
 
 /** Allows long-running Yahoo + Supabase sync from the dashboard server action. */
 export const maxDuration = 300;
@@ -23,6 +25,13 @@ export default function Home() {
             </p> */}
           </div>
           <div className="flex shrink-0 flex-wrap items-center gap-2 lg:justify-end">
+            <Link
+              href="/table"
+              className="inline-flex items-center gap-2 rounded-xl border border-white/[0.08] bg-zinc-900/60 px-3 py-2 text-xs font-medium text-zinc-300 transition-colors hover:border-emerald-500/20 hover:text-white"
+            >
+              <Table2 className="size-3.5" aria-hidden />
+              Metrics table
+            </Link>
             <ThemeSwitcher />
             {/* <span className="rounded-full border border-white/[0.08] bg-zinc-900/50 px-3 py-1.5 text-xs font-medium text-[var(--app-muted)]">
               Yahoo · <span className="text-[var(--app-text)]/80">same tape as yfinance</span>

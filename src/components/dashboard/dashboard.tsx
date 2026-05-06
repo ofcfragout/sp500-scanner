@@ -15,7 +15,7 @@ import {
   TrendingUp,
 } from "lucide-react";
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { LeadersBarChart, ScoreRadar } from "./insight-charts";
+import { ScoreRadar } from "./insight-charts";
 import { ScanRunButton } from "./scan-run-button";
 import { StockTable, type SortColumn, type SortDir } from "./stock-table";
 import { DiagnosticsTabs } from "./diagnostics-tabs";
@@ -358,13 +358,6 @@ export function Dashboard() {
             ) : null}
           </div>
 
-          <div className="rounded-2xl border border-white/[0.06] bg-zinc-900/35 p-5 shadow-lg shadow-black/30">
-            <p className="text-[11px] font-semibold uppercase tracking-wider text-zinc-500">Leaderboard</p>
-            <p className="mt-1 text-xs text-zinc-600">Highest composite scores in current dataset</p>
-            <div className="mt-3">
-              <LeadersBarChart rows={rows} />
-            </div>
-          </div>
         </aside>
       </div>
     </div>
